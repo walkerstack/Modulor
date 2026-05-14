@@ -145,6 +145,7 @@
     "@nocobase/plugin-gantt",
     "@nocobase/plugin-text-copy",
     "@nocobase/plugin-kanban",
+    "@nocobase/plugin-file-previewer-office",
     "@nocobase/plugin-flow-engine",
     "@nocobase/plugin-logger",
     "@nocobase/plugin-notification-manager",
