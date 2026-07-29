@@ -1,161 +1,163 @@
-English | [简体中文](./README.zh-CN.md) | [日本語](./README.ja-JP.md) | [Français](./README.fr.md) | [Español](./README.es.md) | [Português](./README.pt.md) | [Português (BR)](./README.pt-BR.md) | [Bahasa Indonesia](./README.id.md) | [Tiếng Việt](./README.vi.md) | [Deutsch](./README.de.md)
+# Modulor
 
-https://github.com/user-attachments/assets/3b89d965-f60f-48e0-8110-24186c2911d2
+**An AI + no-code platform for building business systems fast.**
 
-<p align="center">
-<a href="https://trendshift.io/repositories/4112" target="_blank"><img src="https://trendshift.io/api/badge/repositories/4112" alt="nocobase%2Fnocobase | Trendshift" style="width: 250px; height: 55px;" width="250" height="55"/></a>
-<a href="https://www.producthunt.com/posts/nocobase?embed=true&utm_source=badge-top-post-topic-badge&utm_medium=badge&utm_souce=badge-nocobase" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-topic-badge.svg?post_id=456520&theme=light&period=weekly&topic_id=267" alt="NocoBase - Scalability&#0045;first&#0044;&#0032;open&#0045;source&#0032;no&#0045;code&#0032;platform | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
-</p>
+Instead of generating everything from scratch, AI works on top of production-proven infrastructure and a WYSIWYG no-code interface — so you get both speed and reliability.
+
+> **Note:** the npm packages, CLI (`nb`), and internal commands retain their original identifiers, so every command below is copy-paste accurate.
 
 ## Table of Contents
 
-- [What is NocoBase](#what-is-nocobase)
+- [What It Is](#what-it-is)
 - [Quick Start](#quick-start)
-- [Release Notes](#release-notes)
 - [Distinctive Features](#distinctive-features)
+  - [1. Collaborative — AI and people build together](#1-collaborative--ai-and-people-build-together)
+  - [2. Intelligent — AI helps run the business](#2-intelligent--ai-helps-run-the-business)
+  - [3. Reliable — ready infrastructure for real business](#3-reliable--ready-infrastructure-for-real-business)
+- [Repository Structure](#repository-structure)
+- [Development](#development)
+- [License](#license)
 
-## What is NocoBase
+## What It Is
 
-NocoBase is an open-source AI + no-code platform for building business systems fast. Instead of generating everything from scratch, AI works on top of production-proven infrastructure and a WYSIWYG no-code interface, so you get both speed and reliability.
+Modulor is a platform for building internal business systems — data models, pages, workflows, and permissions — without starting from scratch each time. Two audiences work on the same system:
 
-Homepage:  
-https://www.nocobase.com/
+- **Coding agents** get a full CLI and a set of skills
+- **People** get a visual, WYSIWYG configuration interface
 
-Online demo:  
-https://demo.nocobase.com/new
-
-Documentation:  
-https://docs.nocobase.com/
-
-Forum:  
-https://forum.nocobase.com/c/english-forum/5
-
-User stories:  
-https://www.nocobase.com/en/blog/tags/customer-stories
+Both operate against the same underlying data model, so work done by either side stays transparent and reversible.
 
 ## Quick Start
 
 ```bash
-# Install NocoBase CLI
+# Install the CLI
 npm install -g @nocobase/cli
 nb --version
 
-# Install a NocoBase app
+# Initialize an app
 nb init --ui
 
-# Optional: build together with an AI Agent
-codex # claude, opencode
+# Optional: build alongside an AI coding agent
+codex   # or claude, opencode
 ```
-
-Detailed steps:
-
-- <a target="_blank" href="https://docs.nocobase.com/ai/install-nocobase-app">Install a NocoBase app</a>
-- <a target="_blank" href="https://docs.nocobase.com/ai/quick-start">AI Agent Integration Guide</a>
-
-## Release Notes
-
-Our [release notes](https://www.nocobase.com/en/blog/timeline) are updated regularly on the blog, with weekly summaries of important changes.
 
 ## Distinctive Features
 
-### 1. Collaborative: AI and people build together
+### 1. Collaborative — AI and people build together
 
-Coding agents get a full CLI and skills, while people get a WYSIWYG no-code interface, so both can collaborate efficiently.
+Coding agents get a full CLI and skills; people get a WYSIWYG no-code interface. Both can collaborate efficiently on the same system.
 
-#### Build with the AI coding agents you already know
+**Build with the coding agents you already use**
 
-Go from deployment to a working system in minutes with mainstream coding agents.
-
-- Works with mainstream agents like Claude Code, Cursor, Codex, OpenCode, and TRAE
+- Works with mainstream agents such as Claude Code, Cursor, Codex, OpenCode, and TRAE
 - Agents can handle setup, development, migration, and release end to end
 
-![coding-agent](https://static-docs.nocobase.com/coding-agent.png)
-
-#### Build manually in a WYSIWYG no-code interface
-
-People can build and modify visually in a WYSIWYG interface, even without AI.
+**Build manually in a WYSIWYG interface**
 
 - Switch between usage mode and configuration mode with one click
 - Review and configure data models, pages, workflows, and permissions visually
 - Designed for regular users, not just developers
 
-![wysiwyg](https://static-docs.nocobase.com/wysiwyg.gif)
-
-#### Mix AI development and manual building however you need
-
-Split the work as needed: people can refine what AI builds, and AI can continue from human configuration.
+**Mix both approaches however you need**
 
 - AI can quickly create data models, pages, and workflows
-- People can quickly refine the UI and interactions
-- Collaborate as needed and keep iterating
+- People can refine the UI and interactions
+- Either side can pick up where the other left off and keep iterating
 
-![ai-no-coding](https://static-docs.nocobase.com/ai-no-coding.png)
+### 2. Intelligent — AI helps run the business
 
-### 2. Intelligent: AI helps run the business, not just build the system
+The platform includes **AI employees**, so AI can work inside the running system rather than only helping to build it.
 
-NocoBase includes AI employees, so AI can work directly inside the system.
+**AI employees integrated into business workflows**
 
-#### AI employees integrated into business workflows
+- Front-end: analysis, Q&A, form filling, and more
+- Back-end: document recognition, risk monitoring, and task routing
+- Integrated with workflows, so AI employees can participate in decisions and execution
 
-AI employees get business context automatically and execute tasks directly inside the system.
+**Open interfaces for the agent ecosystem**
 
-- Front-end: help with analysis, Q&A, form filling, and more
-- Back-end: handle document recognition, risk monitoring, and task routing automatically
-- Integrated with workflows, AI employees can join decisions and execution
-
-![AI-employee](https://static-docs.nocobase.com/ai-employee-home.png)
-
-#### Open interfaces for the agent ecosystem
-
-MCP, HTTP APIs, CLI, and rich skills let external agents connect securely.
-
-- Platforms like OpenClaw, Hermes, Dify, Coze, and n8n connect through standard protocols
-- Connects with Telegram, WhatsApp, Slack, and Gmail to query data, trigger actions, and execute business workflows
+- MCP, HTTP APIs, CLI, and a rich skill set let external agents connect securely
+- Automation platforms connect through standard protocols
+- Messaging and email integrations can query data, trigger actions, and run business workflows
 - One interface model keeps internal and external agents within the same boundaries
 
-![agents](https://static-docs.nocobase.com/f-agents-logos.jpeg)
-
-#### Permission controls keep AI behavior under control
-
-Every AI action follows the same fine-grained permissions as human users.
+**Permission controls keep AI behavior in check**
 
 - Each AI employee has its own role, with field-level read and write permissions
 - Audit logs make every data change and workflow trigger traceable
-- Admins can adjust AI permissions at any time to keep boundaries clear
+- Administrators can adjust AI permissions at any time
 
-![permission](https://static-docs.nocobase.com/f-permission.png)
+### 3. Reliable — ready infrastructure for real business
 
-### 3. Reliable: ready infrastructure for real business
+Data models, permissions, and workflows are complex and error-sensitive. They ship as built-in infrastructure, tested in production, rather than being regenerated as black-box code each time.
 
-Data models, permissions, and workflows are complex and error-sensitive.  
-NocoBase provides them as built-in infrastructure, tested and proven in production.
+**Complete infrastructure out of the box**
 
-#### Complete infrastructure, without starting from scratch
-
-Dozens of built-in modules cover the most common business needs.
-
-- Data models, permissions, workflows, and audit logs work out of the box
-- Proven in production, instead of regenerated as black-box code each time
+- Dozens of built-in modules cover the most common business needs
+- Data models, permissions, workflows, and audit logs work immediately
 - Built-in guardrails keep AI output aligned with the system architecture
 
-![core](https://static-docs.nocobase.com/f-core.png)
+**Data-model driven, with data decoupled from the UI**
 
-#### Data-model driven, with data decoupled from UI
-
-Business data stays in standard relational structures, separate from the UI.
-
+- Business data stays in standard relational structures, separate from the interface
 - Use the main database, external databases, and third-party APIs as data sources
-- AI and people work on the same data model, so results stay transparent
-- Your data always stays in your own database, without platform lock-in
+- AI and people work against the same data model, so results stay transparent
+- Data stays in your own database — no platform lock-in
 
-![model](https://static-docs.nocobase.com/model.png)
+**Plugin architecture for sustainable growth**
 
-#### Plugin architecture for sustainable growth
-
-With a microkernel design, everything is a plugin and the system can grow without losing control.
-
+- A microkernel design where everything is a plugin
 - New features are added through composable plugins with shared conventions
-- Mix custom and official plugins to fit your business
-- The same architecture applies to both AI-built and manually built plugins
+- Mix custom and bundled plugins to fit your business
+- The same architecture applies to AI-built and manually built plugins
 
-![plugins](https://static-docs.nocobase.com/plugins.png)
+## Repository Structure
+
+This is a Yarn/Lerna monorepo:
+
+```
+packages/
+├── core/         # Framework core (server, client, database, CLI, ...)
+├── plugins/      # Bundled plugins
+└── presets/      # Preset plugin bundles
+docker/           # Container definitions
+docs/             # Documentation source
+examples/         # Example applications
+benchmark/        # Performance benchmarks
+locales/          # Translations
+scripts/          # Build and release tooling
+storage/          # Runtime storage
+```
+
+Localized versions of this document are available as `README.<locale>.md` alongside this file.
+
+## Development
+
+Requires **Node.js 18+**.
+
+```bash
+yarn install          # Install dependencies
+
+yarn dev              # Start the development server
+yarn dev-server       # Server only
+
+yarn build            # Build for production
+yarn start            # Run the production build
+
+yarn test             # Full test suite
+yarn test:server      # Server tests
+yarn test:client      # Client tests
+yarn e2e              # End-to-end tests (Playwright)
+
+yarn pm               # Plugin manager CLI
+```
+
+Environment templates are provided as `.env.example`, `.env.test.example`, `.env.e2e.example`, and `.env.perf.example` — copy the relevant one to `.env` before running.
+
+Container-based setup is available via `docker-compose.yml` and the `Dockerfile`.
+
+## License
+
+This project is distributed under the terms in [LICENSE.txt](LICENSE.txt), with third-party components under [LICENSE-APACHE.txt](LICENSE-APACHE.txt). Portions are AGPL-3.0 licensed.
+
+> **Important:** the license agreement places specific restrictions on removing or altering branding, names, links, version numbers, and intellectual-property statements — and grants those rights only under particular license tiers. Review [LICENSE.txt](LICENSE.txt) (sections 5–7) and confirm your tier before rebranding or redistributing this software. Security policy is documented in [SECURITY.md](SECURITY.md).
